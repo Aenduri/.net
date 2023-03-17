@@ -40,10 +40,14 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: ASP-app
+          
+    
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
+        uses: azure/login@v1
         uses: azure/webapps-deploy@v2
+       
         with:
           app-name: 'dotnettestingapp'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_18EFF0C68BB7483FBE5D6601B2501ED3 }}
