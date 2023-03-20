@@ -1,10 +1,7 @@
-name: Build and deploy ASP app to Azure Web App - myaspdotnet48app
+name: testing webapp
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   build:
